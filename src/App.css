@@ -1,0 +1,78 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.app {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;  
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.weather-details {
+  text-align: center;
+}
+
+.forecast-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.forecast-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .forecast-list {
+    .forecast-item {
+      width: calc(20% - 10px); 
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .app {
+    max-width: 800px;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  input,
+  select,
+  button {
+    width: auto;
+  }
+
+  .forecast-list {
+    .forecast-item {
+      width: calc(50% - 10px); 
+    }
+  }
+}
